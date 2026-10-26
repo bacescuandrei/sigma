@@ -16,8 +16,9 @@ logsource:
     product: windows
 detection:
     selection:
-        - TargetFilename|endswith: '_64refl.ps1'
-        - TargetFilename|endswith: '\host_ip.ps1'
+        TargetFilename|endswith:
+            - '_64refl.ps1'
+            - '\host_ip.ps1'
     condition: selection
 falsepositives:
     - Unknown
